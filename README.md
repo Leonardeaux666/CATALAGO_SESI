@@ -1,7 +1,14 @@
- Catálogo de Cursos - SESI (Teste Técnico)
+Catálogo de Cursos - SESI (Teste Técnico)
 Aplicação Full-Stack (Angular + .NET) desenvolvida para o teste técnico do SESI. O sistema permite visualizar, pesquisar e filtrar cursos de Card Games (Pokémon TCG, Yu-Gi-Oh!, Magic, etc.), simulando um catálogo educacional.
 
- Tecnologias Utilizadas
+🌐 Links do Projeto (Produção)
+Front-end (Azure Static Web Apps): https://salmon-sand-09269c10f3.azurestaticapps.net
+
+Back-end / API (Render): https://catalago-sesi.onrender.com/api/cursos
+
+(Nota: O Back-end está hospedado no plano gratuito do Render. Caso o servidor esteja "dormindo", a primeira requisição pode demorar cerca de 50 segundos para responder).
+
+🚀 Tecnologias Utilizadas
 Front-end: Angular 17+ (Standalone Components, Signals, Router, HttpClient)
 
 Back-end: .NET 8 (C#), ASP.NET Core Web API
@@ -10,7 +17,7 @@ Estilização: CSS puro (fiel ao protótipo do Figma)
 
 Deploy: Front-end (Azure Static Web Apps) / Back-end (Render)
 
- Estrutura do Projeto
+📂 Estrutura do Projeto
 text
 CATALAGO_SESI/
  ┣ Backend/       # API REST em .NET 8
@@ -38,13 +45,14 @@ bash
 ng serve
 Acesse http://localhost:4200 no navegador.
 
- Documentação da API
+📡 Documentação da API
 A API fornece os dados dos cursos e permite filtragem diretamente no back-end.
 
 URL Base Local: http://localhost:5170/api/cursos
-URL Base Produção: (Substitua pela URL do Render após o deploy)
 
-Endpoints
+URL Base Produção: https://catalago-sesi.onrender.com/api/cursos
+
+Endpoint Principal
 1. Listar todos os cursos (com filtros opcionais)
 Método: GET
 
@@ -74,7 +82,7 @@ Filtrar cursos online que estão com inscrições abertas:
 
 http
 GET /api/cursos?modalidade=online&status=Inscrições Abertas
-Combinar busca e filtro (Cursos de Arte ou Estratégia presenciais):
+Combinar busca e filtro (Cursos de Estratégia presenciais):
 
 http
 GET /api/cursos?categoria=ESTRATÉGIA&modalidade=Presencial
@@ -96,10 +104,10 @@ json
     "dataDisponibilizacao": "2024-01-15"
   }
 ]
- Uso de Inteligência Artificial
+🧠 Uso de Inteligência Artificial
 O desenvolvimento do Front-end contou com o auxílio de IA para otimização de tempo. Os detalhes sobre as ferramentas, prompts e correções podem ser consultados no arquivo USO_DE_IA.md na raiz do projeto.
 
- Funcionalidades Implementadas
+✨ Funcionalidades Implementadas
 ☑ Listagem de cursos via API.
 ☑ Pesquisa por nome (via API).
 ☑ Filtros por categoria, modalidade e status (via API).
