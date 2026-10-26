@@ -9,7 +9,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowAngular",
         policy => policy.WithOrigins(
                             "http://localhost:4200", 
-                            "https://salmon-sand-09269c10f3.azurestaticapps.net" // <-- Adicionado o link do Azure
+                            "https://salmon-sand-09269c10f3.azurestaticapps.net"
                         )
                         .AllowAnyHeader()
                         .AllowAnyMethod());
@@ -17,7 +17,10 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-app.UseCors("AllowAngular");
+// A ORDEM AQUI É CRUCIAL:
+app.UseRouting();
+
+app.UseCors("AllowAngular"); // 2. Aplica o CORS DEPOIS do roteamento
 
 if (app.Environment.IsDevelopment())
 {
@@ -25,6 +28,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.MapControllers();
+app.UseAuthorization(); // 3. Autorização (se necessário)
+
+app.MapControllers(); // 4. Mapeia os controllers
 
 app.Run();
