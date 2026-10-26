@@ -17,10 +17,10 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-// A ORDEM AQUI É CRUCIAL:
-app.UseRouting();
 
-app.UseCors("AllowAngular"); // 2. Aplica o CORS DEPOIS do roteamento
+app.UseRouting();           // 1. Roteamento primeiro
+app.UseCors("AllowAngular"); // 2. CORS depois do roteamento
+app.UseAuthorization();     // 3. Autorização depois do CORS
 
 if (app.Environment.IsDevelopment())
 {
@@ -28,8 +28,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseAuthorization(); // 3. Autorização (se necessário)
-
-app.MapControllers(); // 4. Mapeia os controllers
+app.MapControllers();
 
 app.Run();
