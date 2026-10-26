@@ -1,0 +1,86 @@
+.secao-cta {
+  background-color: #6B0000; /* Vermelho escuro */
+  padding: 80px 0;
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.coluna-texto {
+  flex: 1;
+}
+
+.coluna-texto h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.coluna-texto p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  color: #F0F0F0;
+}
+
+.btn-matricula {
+  background-color: white;
+  color: #222;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-matricula:hover {
+  background-color: #f0f0f0;
+}
+
+.coluna-video {
+  flex: 1.2;
+}
+
+.video-thumbnail {
+  width: 100%;
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.play-button {
+  width: 70px;
+  height: 70px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #333;
+  padding-left: 5px; /* Ajuste para o ícone ficar centralizado */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.2s;
+}
+
+.video-thumbnail:hover .play-button {
+  transform: scale(1.1);
+}

@@ -1,0 +1,21 @@
+<section class="secao-cursos">
+  <div class="container">
+    <h2 class="titulo-secao">Principais cursos</h2>
+    
+   
+    <p *ngIf="carregando()" style="color: #666; margin-bottom: 20px;">Buscando cursos no servidor...</p>
+
+    <div class="carrossel" *ngIf="!carregando()">
+      
+      <app-card-curso *ngFor="let curso of listaCursos()" [curso]="curso"></app-card-curso>
+    </div>
+
+    <div class="acoes">
+      <button class="btn-ver-todos">Ver todos os cursos</button>
+      <div class="setas">
+        <button class="seta">←</button>
+        <button class="seta">→</button>
+      </div>
+    </div>
+  </div>
+</section>

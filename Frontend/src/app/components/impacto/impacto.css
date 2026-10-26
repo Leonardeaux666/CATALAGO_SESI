@@ -1,0 +1,100 @@
+.secao-impacto {
+  background-color: #FAFAFA;
+  padding: 80px 0;
+  border-top: 1px solid #EAEAEA;
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  gap: 60px;
+}
+
+.coluna-esquerda {
+  flex: 1;
+  max-width: 350px;
+}
+
+.coluna-esquerda h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #222;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.coluna-esquerda p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.coluna-direita {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.lista-numeros {
+  display: flex;
+  flex-direction: column;
+}
+
+.linha-numero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #DDD;
+}
+
+.linha-numero h3 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #222;
+  margin: 0;
+}
+
+.linha-numero span {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.cards-beneficios {
+  display: flex;
+  gap: 30px;
+}
+
+.card-beneficio {
+  flex: 1;
+}
+
+.icone-box {
+  width: 48px;
+  height: 48px;
+  background-color: #FCEBEA;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.card-beneficio h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.card-beneficio p {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.5;
+}

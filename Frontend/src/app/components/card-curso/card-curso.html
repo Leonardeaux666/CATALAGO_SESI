@@ -1,0 +1,14 @@
+<div class="card" 
+     [routerLink]="['/curso', curso.id]" 
+     [style.background-image]="'url(' + curso.imagemUrl + ')'">
+  <div class="overlay">
+    <div class="topo-card">
+      <div class="tag">{{ curso.categoria }}</div>
+      <span class="carga">{{ curso.cargaHoraria }}h</span>
+    </div>
+    <div class="conteudo">
+      <h3 class="titulo">{{ curso.nomeBreve }}</h3>
+      <p class="descricao">{{ curso.descricao }}</p>
+    </div>
+  </div>
+</div>

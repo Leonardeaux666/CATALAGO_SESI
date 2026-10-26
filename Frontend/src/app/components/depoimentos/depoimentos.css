@@ -1,0 +1,96 @@
+.secao-depoimentos {
+  background-color: #6B0000; /* Vermelho bem escuro do fundo */
+  padding: 60px 0;
+  color: white;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.subtitulo {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.container h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+.carrossel-depoimentos {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+  scrollbar-width: none; /* Esconde a barra no Firefox */
+}
+
+.carrossel-depoimentos::-webkit-scrollbar {
+  display: none; /* Esconde a barra no Chrome */
+}
+
+.card-depoimento {
+  background-color: #A61924; /* Vermelho um pouco mais claro */
+  padding: 30px;
+  border-radius: 12px;
+  min-width: 300px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.texto {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  color: #F0F0F0;
+}
+
+.autor h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.autor span {
+  font-size: 0.8rem;
+  color: #DDD;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.estrelas {
+  color: #FFF;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+}
+
+.setas-depoimentos {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.seta {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.seta:hover {
+  opacity: 0.7;
+}

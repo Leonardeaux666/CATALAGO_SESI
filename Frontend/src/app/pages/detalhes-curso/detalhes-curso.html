@@ -1,0 +1,66 @@
+<div class="pagina-detalhes" *ngIf="curso() as cursoAtual">
+  
+  <div class="container">
+    <!-- Topo: Texto e Vídeo -->
+    <div class="topo">
+      <div class="info">
+        <span class="tag">{{ cursoAtual.categoria }}</span>
+        
+        <h1>{{ cursoAtual.nomeCompleto }}</h1>
+        
+        <div class="detalhes-rapidos">
+          <p><span class="icone">📅</span> Início do curso: <strong>{{ cursoAtual.dataDisponibilizacao || 'Em breve' }}</strong></p>
+          <p><span class="icone">🎓</span> Certificação: <strong>SESI</strong></p>
+          <p><span class="icone">⏱️</span> Carga Horária: <strong>{{ cursoAtual.cargaHoraria }} horas</strong></p>
+        </div>
+
+        <button class="btn-matricular">Matricule-se →</button>
+      </div>
+      
+      <div class="video-container">
+        <img [src]="cursoAtual.imagemUrl" alt="Capa do curso">
+        <div class="play-btn">▶</div>
+      </div>
+    </div>
+
+    <!-- Barra de Benefícios (Ícones) -->
+    <div class="beneficios">
+      <div class="beneficio-item">
+        <div class="icone-box">🏅</div>
+        <h4>Certificação SESI</h4>
+        <p>Cursos com a melhor certificação do mercado industrial reconhecidos pelo SESI.</p>
+      </div>
+      <div class="beneficio-item">
+        <div class="icone-box">👨‍🏫</div>
+        <h4>Professores especialistas</h4>
+        <p>Contamos com professores reconhecidos por sua excelência no mercado.</p>
+      </div>
+      <div class="beneficio-item">
+        <div class="icone-box">🎧</div>
+        <h4>Suporte contínuo</h4>
+        <p>Você não está sozinho! Acompanhamento online durante todo o curso.</p>
+      </div>
+      <div class="beneficio-item">
+        <div class="icone-box">🕒</div>
+        <h4>Flexibilidade</h4>
+        <p>Turmas presenciais e online com horários que se adaptam à sua rotina.</p>
+      </div>
+    </div>
+
+    <!-- Sobre o Curso -->
+    <div class="sobre-curso">
+      <h2>Sobre o curso</h2>
+      <p>{{ cursoAtual.descricao }}</p>
+      
+      <p><strong>Público-alvo:</strong> {{ cursoAtual.publicoAlvo }}</p>
+      <p><strong>Modalidade:</strong> {{ cursoAtual.modalidade }}</p>
+      <p><strong>Status:</strong> {{ cursoAtual.status }}</p>
+    </div>
+  </div>
+
+  <!-- Barra Flutuante Inferior (CTA) -->
+  <div class="barra-flutuante">
+    <span>{{ cursoAtual.nomeCompleto }}</span>
+    <button class="btn-matricular">Matricule-se →</button>
+  </div>
+</div>

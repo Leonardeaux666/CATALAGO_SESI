@@ -1,0 +1,46 @@
+.secao-cursos {
+  background-color: white;
+  padding: 60px 0;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.titulo-secao {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 40px;
+}
+.carrossel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+}
+.acoes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.btn-ver-todos {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+}
+.setas {
+  display: flex;
+  gap: 15px;
+}
+.seta {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
